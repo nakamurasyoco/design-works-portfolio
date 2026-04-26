@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nakamurasyoco.github.io/design-works-portfolio/sitemap.xml
