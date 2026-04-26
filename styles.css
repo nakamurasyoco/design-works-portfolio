@@ -226,7 +226,13 @@ h1 {
   margin-top: 0.2rem;
 }
 
-.instagram-link {
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.social-link {
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
@@ -235,7 +241,7 @@ h1 {
   font-weight: 600;
 }
 
-.instagram-link svg {
+.social-link svg {
   width: 24px;
   height: 24px;
   fill: currentColor;
