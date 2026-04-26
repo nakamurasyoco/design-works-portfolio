@@ -229,20 +229,29 @@ h1 {
 .social-links {
   display: flex;
   align-items: center;
-  gap: 0.9rem;
+  gap: 0.7rem;
 }
 
 .social-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
+  display: inline-grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border: 1px solid var(--border);
+  border-radius: 9999px;
+  background: #fff;
   color: var(--text);
   text-decoration: none;
-  font-weight: 600;
+  transition: transform 0.16s ease, box-shadow 0.16s ease;
+}
+
+.social-link:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow);
 }
 
 .social-link svg {
-  width: 24px;
-  height: 24px;
+  width: 18px;
+  height: 18px;
   fill: currentColor;
 }
