@@ -1,5 +1,9 @@
 const gallery = document.getElementById("gallery");
 const cardTemplate = document.getElementById("project-card-template");
+const openVideoButton = document.getElementById("open-video");
+const closeVideoButton = document.getElementById("close-video");
+const videoModal = document.getElementById("video-modal");
+const portfolioVideo = document.getElementById("portfolio-video");
 
 const normalizeText = (value, fallback = "") => {
   if (typeof value !== "string") return fallback;
@@ -42,3 +46,24 @@ const loadProjects = () => {
 };
 
 loadProjects();
+
+const openVideoModal = () => {
+  videoModal.classList.add("is-open");
+  videoModal.setAttribute("aria-hidden", "false");
+  portfolioVideo.currentTime = 0;
+  portfolioVideo.play().catch(() => {});
+};
+
+const closeVideoModal = () => {
+  videoModal.classList.remove("is-open");
+  videoModal.setAttribute("aria-hidden", "true");
+  portfolioVideo.pause();
+};
+
+openVideoButton?.addEventListener("click", openVideoModal);
+closeVideoButton?.addEventListener("click", closeVideoModal);
+videoModal?.addEventListener("click", (event) => {
+  if (event.target === videoModal) {
+    closeVideoModal();
+  }
+});

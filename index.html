@@ -30,8 +30,34 @@
         <h2>作品一覧</h2>
       </section>
 
+      <section class="featured-video" aria-label="注目動画">
+        <button
+          id="open-video"
+          class="video-trigger"
+          type="button"
+          aria-label="動画を再生"
+        >
+          <img
+            src="assets/images/soccer-video-cover.jpg"
+            alt="サッカーデザイン動画のサムネイル"
+          />
+          <span class="play-badge">▶ 動画を再生</span>
+        </button>
+      </section>
+
       <section id="gallery" class="gallery" aria-label="作品ギャラリー"></section>
     </main>
+
+    <div id="video-modal" class="video-modal" aria-hidden="true">
+      <div class="video-modal-inner">
+        <button id="close-video" class="close-video" type="button" aria-label="閉じる">
+          ✕
+        </button>
+        <video id="portfolio-video" controls playsinline preload="metadata">
+          <source src="assets/videos/soccer-highlight.mp4" type="video/mp4" />
+        </video>
+      </div>
+    </div>
 
     <template id="project-card-template">
       <article class="card">
