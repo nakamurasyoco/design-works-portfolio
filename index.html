@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Design Works</title>
+    <meta
+      name="description"
+      content="デザイン作品をシンプルに一覧表示するポートフォリオサイトです。"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <h1>Design Works</h1>
+        <a
+          class="contact-button"
+          href="https://form.run/@NAKAMURA-qq1j9CZHahTYKknfV9j1"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          お問い合わせはこちら
+        </a>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="section-head">
+        <h2>作品一覧</h2>
+      </section>
+
+      <section id="gallery" class="gallery" aria-label="作品ギャラリー"></section>
+    </main>
+
+    <template id="project-card-template">
+      <article class="card">
+        <img class="card-image" alt="" loading="lazy" />
+      </article>
+    </template>
+
+    <footer class="site-footer">
+      <div class="container">
+        <a
+          class="contact-button contact-button-footer"
+          href="https://form.run/@NAKAMURA-qq1j9CZHahTYKknfV9j1"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          お問い合わせはこちら
+        </a>
+        <a
+          class="instagram-link"
+          href="https://www.instagram.com/syoco_w/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram アカウントへ移動"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm8.5 1.5h-8.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5a4.25 4.25 0 0 0 4.25-4.25v-8.5a4.25 4.25 0 0 0-4.25-4.25ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 1.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Zm5.38-2.38a1.12 1.12 0 1 1 0 2.24 1.12 1.12 0 0 1 0-2.24Z"
+            />
+          </svg>
+          <span>Instagram</span>
+        </a>
+        <small>© 2026 Design Works</small>
+      </div>
+    </footer>
+
+    <script src="data/projects.js"></script>
+    <script src="script.js" defer></script>
+  </body>
+</html>
